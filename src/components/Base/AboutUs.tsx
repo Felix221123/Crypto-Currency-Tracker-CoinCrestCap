@@ -35,10 +35,10 @@ export const AboutUs = () => {
     const getMarketCapData = async () => {
       const options = {
         method: "GET",
-        // headers: {
-        //   'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
-        //   'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-        // }
+        headers: {
+          'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
+          'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+        }
       };
       const url = "/coinpaprika/global";
       try {
