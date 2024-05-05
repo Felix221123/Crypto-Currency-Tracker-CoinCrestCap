@@ -1,0 +1,196 @@
+@import "../../../static/base";
+
+
+
+
+
+@mixin FooterSection() {
+    width: 100%;
+    border-top: 1px solid $clr-grey-shade;
+    margin-top: 3.5rem;
+    background-color: $glasmorphism-clr;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    
+
+    >.mainFooterSection {
+        @include flex(row);
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-inline: auto;
+        padding: 2.5rem 0rem;
+        border-bottom: 1px solid $clr-grey-shade;
+        margin-bottom: 1.5rem;
+        // z-index: -1;
+
+        @media (max-width:1439px) {
+            @include flexComp(column);
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 2rem 2rem;
+            row-gap: 2rem;
+        }
+
+        @media (min-width:1440px) {
+            @include mainBodyWidth();
+            padding: 2.5rem 2rem !important;
+            // background-color: red;
+        }
+
+        >.logoSection {
+            @include flex(column);
+            row-gap: 1rem;
+
+            >p.txt {
+                @include fontSize15px();
+                color: $clr-grey-shade;
+                font-family: theme("fonts.fontPoppins");
+                letter-spacing: 1px;
+            }
+
+            >div.socialIcons {
+                @include flex(row);
+                align-items: center;
+                column-gap: 1rem;
+
+                >a.border {
+                    @include flexComp(column);
+                    border: 1px solid $clr-white;
+                    border-radius: 50%;
+                    padding: 0.7rem;
+
+                    &:hover {
+                        border-color: $lightishGreen;
+                    }
+                }
+
+            }
+
+        }
+
+        >.contactNavSection {
+            @include flex(row);
+            justify-content: space-between;
+            column-gap: 3rem;
+
+            @media (max-width:1439px) {
+                @include flexComp(column);
+                justify-content: flex-start;
+                align-items: flex-start;
+                row-gap: 1.5rem;
+            }
+
+            >.navSection {
+                @include flex(column);
+                row-gap: 0.5rem;
+
+                >p {
+                    @include fontSize15px();
+                    color: $clr-white;
+                    font-family: theme("fonts.fontPoppins");
+                }
+            }
+
+            >.contactSection {
+                @include flex(column);
+                row-gap: 1rem;
+
+                >article {
+                    @include fontSize18px();
+                    color: $whiteClr;
+                }
+
+                >.infoSection {
+                    @include flex(row);
+                    align-items: center;
+                    column-gap: 1rem;
+
+                    >span {
+                        @include fontSize15px();
+                        color: $clr-white;
+                        font-family: theme("fonts.fontPoppins");
+                    }
+                }
+            }
+
+        }
+
+        >.emailSubSection {
+            @include flex(column);
+            row-gap: 1.5rem;
+
+
+            >p.inform {
+                color: $whiteClr;
+                @include fontSize20px();
+                opacity: 0.7;
+            }
+
+            >.formGroup {
+                @include flexComp(row);
+                justify-content: flex-start;
+                column-gap: 1rem;
+
+                @media (max-width:1439px) {
+                    @include flex(column);
+                    row-gap: 1rem;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+
+                >label {
+                    >input {
+                        width: 16rem;
+                        height: 3rem;
+                        padding: 0rem 0rem 0rem 2rem;
+                        @include fontSize15px();
+                        border-radius: 5rem;
+                        border: 1px solid $clr-grey-shade;
+                        background-color: transparent;
+                        color: $clr-white;
+                        outline: none;
+                    }
+                }
+
+                >button {
+                    width: 8.5rem;
+                    height: 3.125rem;
+                    background: $linearGradBtn;
+                    border-radius: 5rem;
+                    color: $clr-white;
+                }
+            }
+        }
+    }
+
+    >.copyRight {
+        >a {
+
+            margin-bottom: 3rem;
+            @include fontSize18px();
+            font-family: theme("fonts.fontRale");
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.contactUsSection {
+    @include FooterSection();
+    z-index: -1;
+}

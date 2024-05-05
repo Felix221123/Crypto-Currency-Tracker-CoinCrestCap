@@ -1,0 +1,192 @@
+@import "../../../static/base";
+
+
+
+
+@mixin HomeContainer() {
+    margin-inline: auto;
+    @include flexComp(column);
+    row-gap: 2.5rem;
+    margin-top: 2rem;
+    @include mainBodyWidth();
+    margin-bottom: 3rem;
+
+    @media (min-width:1440px) {
+        margin-top: 11rem;
+        margin-bottom: 9rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0.48fr 0.52fr;
+        column-gap: 1.5rem;
+    }
+
+    >.heroTxtSection {
+        @include flex(column);
+        align-items: flex-start;
+        row-gap: 1.5rem;
+
+        @media (max-width:1439px) {
+            @include flexComp(column);
+            text-align: center;
+        }
+
+        >h1 {
+            @include fontSize32px();
+            font-family: theme("fonts.fontPoppins");
+            line-height: 2.5rem;
+            color: $whiteClr;
+            opacity: 0.9;
+            font-weight: 600;
+            z-index: -1;
+
+            @media (min-width:1440px) {
+                @include fontSize50();
+                line-height: 160%;
+                
+
+            }
+
+            >.diffClr {
+                color: $darkGreenish;
+            }
+        }
+
+        >p.paraGraphTxt {
+            font-family: theme("fonts.fontPoppins");
+            @include fontSize15px();
+            background: linear-gradient(to right, rgb(235, 236, 235), rgb(245, 252, 251));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: rgba(0, 0, 0, 0);
+
+            @media (min-width:1440px) {
+                @include fontSize18px();
+                padding-right: 2rem;
+            }
+        }
+
+        >button {
+            width: 12.4375rem;
+            height: 4rem;
+            background-image: $linearGradBtn;
+            color: $clr-white;
+            @include fontSize15px();
+            border-radius: 0.5rem;
+
+        }
+    }
+
+
+    >.coinFormation {
+        position: relative;
+        height: 100%;
+        // width: 100%;
+        // @include flexComp(column);
+
+        >img.topBtc {
+            position: absolute;
+            width: 5.875rem;
+            height: 5.875rem;
+            transform: rotateZ(-11.97deg);
+            top: 0%;
+            left: 5%;
+            @include hiddenElement();
+        }
+
+        >img.topMidBtc {
+            width: 4.1738rem;
+            height: 4.1738rem;
+            position: absolute;
+            top: 40%;
+            left: 8%;
+            transform: rotateY(-2.05deg);
+            z-index: 1;
+            @include hiddenElement();
+        }
+
+        >img.BottomBtc {
+            width: 8.9844rem;
+            height: 8.9844rem;
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            z-index: 1;
+            transform: rotateY(-2.05deg);
+            @include hiddenElement();
+        }
+
+        >img.topright {
+            width: 5.875rem;
+            height: 5.875rem;
+            position: absolute;
+            top: 10%;
+            right: 3%;
+            z-index: 1;
+            transform: rotateZ(13.01deg);
+            @include hiddenElement();
+        }
+
+        >img.blackBtc {
+            width: 30.5625rem;
+            height: 25rem;
+            position: absolute;
+            top: 5%;
+            left: 15%;
+            z-index: 0;
+
+            @media (max-width:1439px) {
+                position: relative;
+                width: 25.5625rem;
+                height: 15rem;
+                left: 0;
+
+                z-index: -1;
+                
+            }
+        }
+
+        >img.usdt {
+            width: 5.375rem;
+            height: 5.375rem;
+            position: absolute;
+            bottom: 20%;
+            transform: rotateY(180deg);
+            left: 20%;
+            z-index: 1;
+            @include hiddenElement();
+        }
+
+        >img.eth-block {
+            width: 4.9088rem;
+            height: 4.9088rem;
+            position: absolute;
+            bottom: 20%;
+            transform: rotateZ(-8.75deg);
+            right: 12%;
+            z-index: 1;
+            @include hiddenElement();
+        }
+
+        >img.ethgreen {
+            width: 6.4369rem;
+            height: 6.4369rem;
+            position: absolute;
+            bottom: 0%;
+            transform: rotateZ(8.75deg);
+            right: 0%;
+            z-index: 1;
+            @include hiddenElement();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.homeContainer {
+    @include HomeContainer();
+}

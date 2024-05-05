@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$glasmorphism-clr: rgba(200, 200, 200, 0.04);
+$whiteClr : #FFFFFF;
+$lightgrey: #EFF2F5;
+$pureBlack : #000000;
+$lightPureDarkish: #222531;
+$lightishGrey: #58667E;
+$lightishGreen: #16C784;
+$greenbull-clr:#00A83E;
+$darkishRed: #EA3943;
+$lightGreyish: #808A9D;
+$darkGreenish: #1DC5B8;
+$darkish: #292D32;
+$reallyLightGrey: #A6B1C2;
+$lightRedClr: #FF3A33;
+$grey :#919593;
+$bitDarkish: #0D062D;
+$someDarkish: #101914;
+$opaGrey: rgba(13, 6, 45, 1);
+$purplish: #3861FB;
+$greyish: #CFD6E4;
+$lightish: #F0F6FF;
+$darkishOpa50: rgba(0, 0, 0, 0.5);
+$darkishOpa25: rgba(0, 0, 0, 0.25);
+$darkishOpa15: rgba(0, 0, 0, 0.15);
+$darkishOpa08: rgba(0, 0, 0, 0.08);
+$darkishOpa87: rgba(26, 26, 30, 0.87);
+$linearGradBtn: linear-gradient(to right,
+        #1DC5B8 0%,
+        #009B8F 100%);
+$linearGreyBtn: linear-gradient(to right,
+        #F9FAFA 100%,
+        #939494 100%);
+$mainGrey: #B5B8B6;
+$searchInputBG: rgba(231, 231, 231, 0.3);
+$neatBlue: #0079FF;
+$grayish: #697C9A;
+$darkBlue: #4B6A9B;
+$reallyDarkBlue: #2B3442;
+$whiteSmokish: #F6F8FF;
+$pureWhite: #FEFEFE;
+$cryptoCurrclr:#F0F6FF;
+$bgfilter:#808A9D;
+// Dark mode colors
+$pureWhiteDark: #FFFFFF;
+$darkish: #141D2F;
+$darkbluish: #1E2A47;
+$clr-dark: #0B0D17;
+$clr-grey-shade: #D0D6F9;
+$clr-white: #FFFFFF;
+
+//components mixins here
+@mixin flex($direc) {
+    display: flex;
+    flex-direction: $direc;
+}
+
+@mixin flexComp($direc) {
+    display: flex;
+    flex-direction: $direc;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fontSize12px() {
+    font-size: clamp(0.75rem, 0.755vw, 0.76rem);
+}
+
+@mixin fontSize13px() {
+    font-size: clamp(0.8125rem, 0.82vw, 0.825rem);
+}
+
+@mixin fontSize18px() {
+    font-size: clamp(1.125rem, 1.13vw, 1.13rem);
+}
+
+@mixin fontSize15px() {
+    font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+    line-height: 1.5625rem;
+}
+
+@mixin fontSize14px() {
+    font-size: clamp(0.875rem, 0.88vw, 0.89rem);
+}
+
+@mixin fontSize20px(){
+    font-size: clamp(1.25rem , 1.25vw, 1.26rem);
+}
+
+@mixin fontSize28px() {
+    font-size: clamp(1.75rem, 1.78vw, 1.79rem);
+}
+
+@mixin fontSize24px() {
+    font-size: clamp(1.5rem, 1.52vw, 1.55rem);
+}
+
+@mixin fontSize32px() {
+    font-size: clamp(2rem, 2.05vw, 2.05rem);
+}
+
+@mixin fontSize40px() {
+    font-size: clamp(2.5rem, 2.55vw, 2.6rem);
+}
+
+@mixin fontSizeHomeProductName() {
+    font-size: clamp(2.25rem, 2.26vw, 2.27rem);
+    line-height: 2.5rem;
+    letter-spacing: 1.29px;
+
+    @media (min-width:768px) {
+        font-size: clamp(3.5rem, 3.6vw, 3.7rem);
+        line-height: 3.625rem;
+        letter-spacing: 2px;
+    }
+}
+
+@mixin fontSize50() {
+    font-size: clamp(3.125rem, 3.125vw, 3.13rem);
+}
+
+@mixin fontSize60px() {
+    font-size: clamp(3.75rem, 3.76vw, 3.78rem);
+}
+
+
+@mixin seeProductBtn() {
+    width: 10rem;
+    height: 3rem;
+
+    @include fontSize13px();
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+@mixin Transbtnhovers() {
+    transition: 0.5s;
+}
+
+
+
+@mixin mainBodyWidth() {
+    padding: 0 1.5rem;
+
+    @media (min-width:1440px) {
+        width: 81rem;
+        padding: 0rem 0rem;
+    }
+}
+
+
+@mixin hoverActiveBtn($bgclr , $clr) {
+
+    &:hover,
+    :active {
+        background-color: $bgclr;
+        color: $clr;
+    }
+}
+
+@mixin hiddenElement() {
+    @media (max-width:1439px) {
+        display: none;
+    }
+}
+
+
+@mixin boxContainerCapVolume() {
+    height: 50%;
+    width: 100%;
+    @include backgroundClrForContainers();
+    @include flexComp(row);
+    justify-content: space-between;
+
+    >.textSection {
+        @include flex(column);
+        row-gap: 0.3rem;
+
+        >p.capAmount {
+            font-family: theme("fonts.fontInter");
+            color: $whiteSmokish;
+            @include fontSize24px();
+
+            @media (max-width:1439px) {
+                @include fontSize15px();
+                
+            }
+        }
+
+        >p.capText {
+            font-family: theme("fonts.fontInter");
+            @include fontSize13px();
+            color: $clr-white;
+            @include flex(row);
+            align-items: center;
+            column-gap: 0.5rem;
+            > .change24hr{
+                @include fontSize13px();
+            }
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+
+@mixin backgroundClrForContainers() {
+    border-radius: 0.75rem;
+    border: 1px solid $darkBlue;
+    background-color: $glasmorphism-clr;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+}
+
+
+@mixin trendingAndGainersCon() {
+    @include flex(column);
+    @include backgroundClrForContainers();
+    row-gap: 1rem;
+
+    >.headerSection {
+        @include flexComp(row);
+        justify-content: space-between;
+
+        > p.headerTxt {
+            @include fontSize15px();
+            color: $lightgrey;
+            font-family: theme("fonts.fontInter")
+        }
+
+        & a.view {
+            cursor: pointer;
+            @include fontSize12px();
+            @include flexComp(row);
+            align-items: center;
+            column-gap: 0.4rem;
+            color: $clr-white;
+            
+        }
+    }
+
+    > .coinsContainer{
+        @include flex(column);
+        justify-content: space-between;
+        row-gap: 0.75rem;
+
+        > .eachCoinContainer{
+            @include flexComp(row);
+            justify-content: space-between;
+
+            > .leftHandSide{
+                @include flexComp(row);
+                column-gap: 0.75rem;
+                > img{
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    border-radius: 50%;
+                }
+                > p.coinName{
+                    font-family: theme("fonts.fontPoppins");
+                    color: $clr-white;
+                    @include fontSize15px();
+                    letter-spacing: 0.05rem;
+
+                    @media (max-width:1439px) {
+                        @include fontSize14px();
+                        
+                    }
+                }
+            }
+            > .rightHandSide{
+                @include flexComp(row);
+                justify-content: space-between;
+                column-gap: 0.5rem;
+
+                > p.coinPrice{
+                    color: $clr-grey-shade;
+                    @include fontSize15px();
+                    font-family: theme("fonts.fontInter");
+                }
+                > p.changeInPrice{
+                    @include fontSize15px();
+                    font-family: theme("fonts.fontInter");
+                    color: green;
+                }
+            }
+        }
+    }
+}

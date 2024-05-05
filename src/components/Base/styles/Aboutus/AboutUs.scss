@@ -1,0 +1,116 @@
+@import "../../../static/base";
+
+
+
+
+
+@mixin AboutUsContainer() {
+    @include mainBodyWidth();
+    @include flex(column);
+    margin-inline: auto;
+    row-gap: 3rem;
+
+    >.headerContainer {
+        @include flexComp(column);
+        row-gap: 0.5rem;
+
+        >h2 {
+            text-align: center;
+            @include fontSize28px();
+            color: $greyish;
+            line-height: 150%;
+            font-family: theme("fonts.fontInter");
+
+            @media (min-width:1440px) {
+                @include fontSize50();
+                padding: 0 20%;
+            }
+        }
+
+        >p.para {
+            font-family: theme("fonts.fontInter");
+            text-align: center;
+            @include fontSize14px();
+            color: $clr-white;
+        }
+    }
+
+    >.trendingContainers {
+        @include flex(column);
+        row-gap: 1.5rem;
+        margin-inline: auto;
+        flex: 1;
+
+
+
+        @media (min-width:1439px) {
+            @include flex(row);
+            column-gap: 1rem;
+            align-items: center;
+        }
+
+        >.containerStyle {
+            width: 26.041875rem;
+            height: 11.75rem;
+            z-index: -1;
+            border-radius: 0.5rem;
+            border: 1px solid $darkBlue;
+
+            @media (max-width:500px) {
+                width: 20rem;
+            }
+            @media (max-width:355px) {
+                width: 18.5rem;
+            }
+        }
+
+        >.marketCapContainer {
+            border: none;
+            @include flex(column);
+            row-gap: 0.5rem;
+            background-color: transparent;
+
+
+            >.marketCap {
+                @include boxContainerCapVolume();
+            }
+
+            >.hrVolume {
+                @include boxContainerCapVolume();
+            }
+        }
+
+        > .trendingContainer{
+            @include trendingAndGainersCon();
+        }
+
+        > .gainersContainer{
+            @include trendingAndGainersCon();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// main styles 
+.aboutUsContainer {
+    @include AboutUsContainer();
+}

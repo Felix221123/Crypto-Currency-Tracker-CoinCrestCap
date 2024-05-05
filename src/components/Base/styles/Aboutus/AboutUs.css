@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+button {
+  cursor: pointer;
+}
+
+.aboutUsContainer {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  row-gap: 3rem;
+}
+@media (min-width: 1440px) {
+  .aboutUsContainer {
+    width: 81rem;
+    padding: 0rem 0rem;
+  }
+}
+.aboutUsContainer > .headerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+.aboutUsContainer > .headerContainer > h2 {
+  text-align: center;
+  font-size: clamp(1.75rem, 1.78vw, 1.79rem);
+  color: #CFD6E4;
+  line-height: 150%;
+  font-family: theme("fonts.fontInter");
+}
+@media (min-width: 1440px) {
+  .aboutUsContainer > .headerContainer > h2 {
+    font-size: clamp(3.125rem, 3.125vw, 3.13rem);
+    padding: 0 20%;
+  }
+}
+.aboutUsContainer > .headerContainer > p.para {
+  font-family: theme("fonts.fontInter");
+  text-align: center;
+  font-size: clamp(0.875rem, 0.88vw, 0.89rem);
+  color: #FFFFFF;
+}
+.aboutUsContainer > .trendingContainers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  margin-inline: auto;
+  flex: 1;
+}
+@media (min-width: 1439px) {
+  .aboutUsContainer > .trendingContainers {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    align-items: center;
+  }
+}
+.aboutUsContainer > .trendingContainers > .containerStyle {
+  width: 26.041875rem;
+  height: 11.75rem;
+  z-index: -1;
+  border-radius: 0.5rem;
+  border: 1px solid #4B6A9B;
+}
+@media (max-width: 500px) {
+  .aboutUsContainer > .trendingContainers > .containerStyle {
+    width: 20rem;
+  }
+}
+@media (max-width: 355px) {
+  .aboutUsContainer > .trendingContainers > .containerStyle {
+    width: 18.5rem;
+  }
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  background-color: transparent;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap {
+  height: 50%;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #4B6A9B;
+  background-color: rgba(200, 200, 200, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap > .textSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap > .textSection > p.capAmount {
+  font-family: theme("fonts.fontInter");
+  color: #F6F8FF;
+  font-size: clamp(1.5rem, 1.52vw, 1.55rem);
+}
+@media (max-width: 1439px) {
+  .aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap > .textSection > p.capAmount {
+    font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+    line-height: 1.5625rem;
+  }
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap > .textSection > p.capText {
+  font-family: theme("fonts.fontInter");
+  font-size: clamp(0.8125rem, 0.82vw, 0.825rem);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .marketCap > .textSection > p.capText > .change24hr {
+  font-size: clamp(0.8125rem, 0.82vw, 0.825rem);
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume {
+  height: 50%;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #4B6A9B;
+  background-color: rgba(200, 200, 200, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume > .textSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume > .textSection > p.capAmount {
+  font-family: theme("fonts.fontInter");
+  color: #F6F8FF;
+  font-size: clamp(1.5rem, 1.52vw, 1.55rem);
+}
+@media (max-width: 1439px) {
+  .aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume > .textSection > p.capAmount {
+    font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+    line-height: 1.5625rem;
+  }
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume > .textSection > p.capText {
+  font-family: theme("fonts.fontInter");
+  font-size: clamp(0.8125rem, 0.82vw, 0.825rem);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.aboutUsContainer > .trendingContainers > .marketCapContainer > .hrVolume > .textSection > p.capText > .change24hr {
+  font-size: clamp(0.8125rem, 0.82vw, 0.825rem);
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  border: 1px solid #4B6A9B;
+  background-color: rgba(200, 200, 200, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  row-gap: 1rem;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .headerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .headerSection > p.headerTxt {
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  color: #EFF2F5;
+  font-family: theme("fonts.fontInter");
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .headerSection a.view {
+  cursor: pointer;
+  font-size: clamp(0.75rem, 0.755vw, 0.76rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+  color: #FFFFFF;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 0.75rem;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .leftHandSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > p.coinName {
+  font-family: theme("fonts.fontPoppins");
+  color: #FFFFFF;
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  letter-spacing: 0.05rem;
+}
+@media (max-width: 1439px) {
+  .aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > p.coinName {
+    font-size: clamp(0.875rem, 0.88vw, 0.89rem);
+  }
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .rightHandSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .rightHandSide > p.coinPrice {
+  color: #D0D6F9;
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  font-family: theme("fonts.fontInter");
+}
+.aboutUsContainer > .trendingContainers > .trendingContainer > .coinsContainer > .eachCoinContainer > .rightHandSide > p.changeInPrice {
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  font-family: theme("fonts.fontInter");
+  color: green;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  border: 1px solid #4B6A9B;
+  background-color: rgba(200, 200, 200, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  row-gap: 1rem;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .headerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .headerSection > p.headerTxt {
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  color: #EFF2F5;
+  font-family: theme("fonts.fontInter");
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .headerSection a.view {
+  cursor: pointer;
+  font-size: clamp(0.75rem, 0.755vw, 0.76rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+  color: #FFFFFF;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 0.75rem;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .leftHandSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > p.coinName {
+  font-family: theme("fonts.fontPoppins");
+  color: #FFFFFF;
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  letter-spacing: 0.05rem;
+}
+@media (max-width: 1439px) {
+  .aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .leftHandSide > p.coinName {
+    font-size: clamp(0.875rem, 0.88vw, 0.89rem);
+  }
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .rightHandSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .rightHandSide > p.coinPrice {
+  color: #D0D6F9;
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  font-family: theme("fonts.fontInter");
+}
+.aboutUsContainer > .trendingContainers > .gainersContainer > .coinsContainer > .eachCoinContainer > .rightHandSide > p.changeInPrice {
+  font-size: clamp(0.9375rem, 0.94vw, 0.94rem);
+  line-height: 1.5625rem;
+  font-family: theme("fonts.fontInter");
+  color: green;
+}/*# sourceMappingURL=AboutUs.css.map */
